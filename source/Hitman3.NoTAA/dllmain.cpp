@@ -53,21 +53,21 @@ void ReadConfig(void)
 
 void DisableTAA(void)
 {
-    // 00000001413206FB | 3998 A8020000 | cmp dword ptr ds : [rax + 2A8] , ebx  |
-    // 0000000141320701 | 74 04         | je hitman3.141320707                  |
-    // 0000000141320703 | B1 01         | mov cl, 1                             | --> B1 00         | mov cl, 0                             | 
-    // 0000000141320705 | EB 02         | jmp hitman3.141320709                 |
+    // 0000000141227F7C | 3998 08030000 | cmp dword ptr ds : [rax + 308] , ebx  |
+    // 0000000141227F82 | 74 04         | je hitman3.141227F88                  |
+    // 0000000141227F84 | B1 01         | mov cl, 1                             | --> B1 00         | mov cl, 0                             | 
+    // 0000000141227F86 | EB 02         | jmp hitman3.141227F8A                 |
 
     const unsigned char patch[] = { 0x00 };
 
-    WritePatchPattern(L"39 98 A8 02 00 00 74 04", patch, sizeof(patch), L"Disable TAA", 9);
+    WritePatchPattern(L"39 98 08 03 00 00 74 04", patch, sizeof(patch), L"Disable TAA", 9);
 }
 
 void SetCustomSharpness(void)
 {
-    // 00000001411BF062 | 8B83 B4020000 | mov eax,dword ptr ds:[rbx+2B4]        | --> mov eax, [SharpnessValue]
+    // 00000001413200D1 | 8B83 B4020000 | mov eax,dword ptr ds:[rbx+2B4]        | --> mov eax, [SharpnessValue]
     //                                                                          | --> nop
-    // 00000001411BF068 | 8987 480D0000 | mov dword ptr ds : [rdi + D48] , eax  |
+    // 00000001413200D7 | 8987 480D0000 | mov dword ptr ds : [rdi + D48] , eax  |
 
     unsigned char patch[] = { 0xB8, 0x00, 0x00, 0x00, 0x00, 0x90 };
 
