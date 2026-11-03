@@ -7,7 +7,25 @@
 # Patches
 
 <details><summary>
+ 
+  ### 007: First Light
+</summary>
   
+  - Disable TAA
+
+#### Installation
+
+- **Note:** ***Please make sure any executable hex edits are removed/reverted first***.
+  - Extract the following contents of the release zip into the Retail folder.
+  - Copy `dinput8.dll` from folder `!ASI_Loader_x64` to game folder.
+  - `007FirstLight.NoTAA.asi`
+
+#### Notes
+
+- Keep Global Illumination setting at Medium level or below to avoid lighting or shadow glitches. 
+</details>
+<details><summary>
+
   ### Assassin's Creed Mirage
 </summary>
   
