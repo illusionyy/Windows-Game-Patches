@@ -15,7 +15,7 @@ concurrency:
 
 jobs:
   build:
-    runs-on: windows-latest
+    runs-on: windows-2022
     env:
       BUILD_PRESET: Win64
       BUILD_PRESET_X86: Win32
