@@ -289,10 +289,11 @@ WINEDLLOVERRIDES="dsound=n,b" %command% -nobattleye
 </details>
 <details><summary>
 
-### Lies of P Demo
+### Lies of P
 </summary>
 
   - Disable TAA
+  - Disable Forced Sharpening
   - Disable Depth of Field
 
 #### Installation
