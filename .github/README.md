@@ -23,6 +23,8 @@
 #### Notes
 
 - Keep Global Illumination setting at Medium level or below to avoid lighting or shadow glitches. 
+
+#### Last tested game version: 1.3.2 (29 October 2026)
 </details>
 <details><summary>
 
@@ -302,6 +304,8 @@ WINEDLLOVERRIDES="dsound=n,b" %command% -nobattleye
   - Extract the following contents of the release zip into the Win64 folder. (`Lies of P Demo\LiesofP\Binaries\Win64\`).
   - Rename `dinput8.dll` from folder `!ASI_Loader_x64` to `winmm.dll` and copy to game folder.
   - `LiesOfP.NoTAA.asi`
+
+#### Last tested game version: 1.14.0.0 (1 October 2026)
 </details>
 <details><summary>
 

@@ -12,7 +12,6 @@ wchar_t exePath[_MAX_PATH] = { 0 };
 
 // INI Variables
 bool bDisableTAA;
-float fSharpness;
 
 void ReadConfig(void)
 {
@@ -35,7 +34,6 @@ void ReadConfig(void)
         std::wofstream iniFile(config_path);
         iniFile << ini_defaults;
         bDisableTAA = true;
-        fSharpness = 0;
         LOG(L"Created default config file.\n");
     }
     else
@@ -67,7 +65,7 @@ void DisableTAA(void)
 
     const unsigned char patch2[] = { 0x85 };
 
-    WritePatchPattern(L"45 84 F6 0F 84 3C 09 00 00", patch2, sizeof(patch2), L"Disable Jitter", 4);
+    WritePatchPattern(L"45 84 F6 0F 84 ?? ?? ?? ?? 0F B6 84 24 CF 00 00 00", patch2, sizeof(patch2), L"Disable Jitter", 4);
 }
 
 DWORD __stdcall Main(void*)
