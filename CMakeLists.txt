@@ -21,6 +21,7 @@ include_directories(
 if (WANT_X86)
 add_subdirectory(source/BF3.Patches)
 else()
+add_subdirectory(source/007FirstLight.NoTAA)
 add_subdirectory(source/ACMirage.NoTAA)
 add_subdirectory(source/ACUnity.Patches)
 add_subdirectory(source/APT2.Patches)
